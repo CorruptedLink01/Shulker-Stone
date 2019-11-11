@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "PSP",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:shulker_shell"
+        },
+        "P": {
+            "item": "minecraft:pink_dye"
+        },
+        "S": {
+            "item": "minecraft:stone"
+        }
+    },
+    "result": {
+        "item": "shulkerstone:pink_shulker_stone",
+        "count": 16
+    }
+}
