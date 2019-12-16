@@ -1,6 +1,8 @@
 package link.corrupted.shulkerstone;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.EndRodBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -59,6 +61,10 @@ public class ShulkerStone {
 		public static Item redShulkerStoneItem;
 		public static Item blackShulkerStoneItem;
 
+		public static Block baselessEndRod;
+
+		public static Item baselessEndRodItem;
+
 		@SubscribeEvent
 		public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 			event.getRegistry().registerAll(
@@ -78,7 +84,9 @@ public class ShulkerStone {
 					brownShulkerStone = new ShulkerStoneBlock(DyeColor.BROWN, Block.Properties.create(Material.SHULKER, MaterialColor.BROWN).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0F)).setRegistryName("brown_shulker_stone"),
 					greenShulkerStone = new ShulkerStoneBlock(DyeColor.GREEN, Block.Properties.create(Material.SHULKER, MaterialColor.GREEN).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0F)).setRegistryName("green_shulker_stone"),
 					redShulkerStone = new ShulkerStoneBlock(DyeColor.RED, Block.Properties.create(Material.SHULKER, MaterialColor.RED).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0F)).setRegistryName("red_shulker_stone"),
-					blackShulkerStone = new ShulkerStoneBlock(DyeColor.BLACK, Block.Properties.create(Material.SHULKER, MaterialColor.BLACK).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0F)).setRegistryName("black_shulker_stone")
+					blackShulkerStone = new ShulkerStoneBlock(DyeColor.BLACK, Block.Properties.create(Material.SHULKER, MaterialColor.BLACK).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0F)).setRegistryName("black_shulker_stone"),
+
+					baselessEndRod = new EndRodBlock(Block.Properties.create(Material.MISCELLANEOUS).hardnessAndResistance(0.0F).lightValue(14).sound(SoundType.WOOD)).setRegistryName("baseless_end_rod")
 			);
 		}
 
@@ -101,7 +109,9 @@ public class ShulkerStone {
 					brownShulkerStoneItem = new BlockItem(brownShulkerStone, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(brownShulkerStone.getRegistryName()),
 					greenShulkerStoneItem = new BlockItem(greenShulkerStone, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(greenShulkerStone.getRegistryName()),
 					redShulkerStoneItem = new BlockItem(redShulkerStone, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(redShulkerStone.getRegistryName()),
-					blackShulkerStoneItem = new BlockItem(blackShulkerStone, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(blackShulkerStone.getRegistryName())
+					blackShulkerStoneItem = new BlockItem(blackShulkerStone, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(blackShulkerStone.getRegistryName()),
+
+					baselessEndRodItem = new BlockItem(baselessEndRod, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(baselessEndRod.getRegistryName())
 			);
 		}
 

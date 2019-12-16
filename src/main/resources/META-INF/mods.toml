@@ -8,7 +8,7 @@ version="${file.jarVersion}" #mandatory
 displayName="Shulker Stone" #mandatory
 authors="Corrupted_Link" #optional
 description='''
-A minecraft mod that add a decorative block that looks like a shulker box
+A minecraft mod that add a decorative block that looks like a shulker box and baseless end rods
 '''
 
 [[dependencies.shulkerstone]] #optional

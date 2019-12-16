@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:end_rod"
+    }
+  ],
+  "result": {
+    "item": "shulkerstone:baseless_end_rod",
+    "count": 1
+  }
+}
